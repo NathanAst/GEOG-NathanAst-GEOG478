@@ -1,4 +1,4 @@
-# Ast_GEOG478
+# GEOG-NathanAst-GEOG478
 
 Nathan Ast
 

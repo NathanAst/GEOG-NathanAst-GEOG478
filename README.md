@@ -6,7 +6,7 @@ Labs
 
 | Lab Number | Link |
 |------------|------|
-| Lab 1      |
+| Lab 1      | https://github.com/NathanAst/GEOG-NathanAst-GEOG478
 | Lab 2      |
 | Lab 3      |
 | Lab 4      |

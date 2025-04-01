@@ -12,7 +12,7 @@ Labs
 | Lab 4      |
 | Lab 5      | https://github.com/NathanAst/GEOG-NathanAst-GEOG478/tree/main/Labs/week05
 | Lab 6      | https://github.com/NathanAst/GEOG-NathanAst-GEOG478/tree/main/Labs/week06
-| Lab 7      |
+| Lab 7      | https://github.com/NathanAst/GEOG-NathanAst-GEOG478/tree/main/Labs/week07
 | Lab 8      |
 
 Homework 

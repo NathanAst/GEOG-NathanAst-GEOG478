@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ArcGIS Kyle Field Feature Layer</title>
+
+    <!-- ArcGIS CSS and JS Library -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.6/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.6/"></script>
+
+    <!-- Internal CSS -->
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      #viewDiv {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Div for the Map View -->
+    <div id="viewDiv"></div>
+
+    <!-- ArcGIS Map and Feature Layer Script -->
+    <script>
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/layers/FeatureLayer",
+        "dojo/domReady!"
+      ], function(Map, MapView, FeatureLayer) {
+        var map = new Map({
+          basemap: "streets"
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          center: [-96.339469, 30.617492],
+          zoom: 17
+        });
+
+        // Define popup template with custom action
+        var popupTemplate = {
+          title: "{Kyle Field}",
+          actions: [{
+            id: "find",
+            title: "Find More Info"
+          }],
+          content: [{
+            type: "fields",
+            fieldInfos: [{
+              fieldName: "Kyle Field"
+            }, {
+              fieldName: "KYLE"
+            }]
+          }]
+        };
+
+        // Add feature layer using new KYLEFIELD URL
+        var featureLayer = new FeatureLayer({
+          url: "https://services1.arcgis.com/qr14biwnHA6Vis6l/arcgis/rest/services/KYLEFIELD/FeatureServer",
+          popupTemplate: popupTemplate
+        });
+
+        map.add(featureLayer);
+      });
+    </script>
+  </body>
+</html>
